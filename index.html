@@ -51,6 +51,7 @@
   <header>
     <h1>GPI Jemaat Bersinar</h1>
     <p>Jl. Jaring Udang 6, Medan Labuhan</p>
+    <div id="datetime" style="font-weight: bold; margin-top: 10px;"></div>
     <img src="Gereja.jpeg" alt="Foto Gereja GPI Jemaat Bersinar">
   </header>
   <main>
@@ -82,5 +83,19 @@
       </iframe>
     </section>
   </main>
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const options = {
+        weekday: 'long', year: 'numeric', month: 'long',
+        day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'
+      };
+      const dateTimeString = now.toLocaleDateString('id-ID', options) + ' ' + now.toLocaleTimeString('id-ID');
+      document.getElementById("datetime").innerHTML = "Waktu sekarang: " + dateTimeString;
+    }
+
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+  </script>
 </body>
 </html>
