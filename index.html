@@ -1,101 +1,90 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GPI Jemaat Bersinar</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
-      background-color: #f7f7f7;
-      color: #333;
     }
+
     header {
-      background-color: #4a7c59;
-      color: white;
-      padding: 20px;
+      background-color: #ffffff;
+      padding: 1em 0;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .kop-surat {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    main {
+      padding: 2em;
       text-align: center;
     }
-    header img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 15px;
-      border-radius: 8px;
+
+    h1 {
+      color: #004080;
+      margin-top: 1em;
     }
-    main {
-      padding: 20px;
+
+    p {
+      font-size: 1.1em;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto 1em;
+      line-height: 1.6;
     }
-    section {
-      margin-bottom: 30px;
+
+    footer {
+      background-color: #004080;
+      color: white;
+      padding: 1em;
+      text-align: center;
+      margin-top: 2em;
     }
-    h1, h2 {
-      margin-top: 0;
-    }
-    .contact {
-      background-color: #e6f0e6;
-      padding: 15px;
-      border-radius: 8px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .map {
-      border-radius: 8px;
-      overflow: hidden;
+
+    @media (max-width: 600px) {
+      p {
+        font-size: 1em;
+        padding: 0 1em;
+      }
+
+      .kop-surat {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>GPI Jemaat Bersinar</h1>
-    <p>Jl. Jaring Udang 6, Medan Labuhan</p>
-    <div id="datetime" style="font-weight: bold; margin-top: 10px;"></div>
-    <img src="Gereja.jpeg" alt="Foto Gereja GPI Jemaat Bersinar">
-  </header>
-  <main>
-    <section class="contact">
-      <h2>Kontak</h2>
-      <p>Telepon/WA: 0813-7630-3141</p>
-    </section>
-    <section>
-      <h2>Jadwal Ibadah</h2>
-      <ul>
-        <li><strong>Minggu</strong>:
-          <ul>
-            <li>Pukul 08.30 s/d 09.30 WIB - Ibadah Anak</li>
-            <li>Pukul 10.30 s/d 12.30 WIB - Ibadah Raya</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-    <section class="map">
-      <h2>Lokasi Gereja</h2>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7964.151030716204!2d98.6876!3d3.7545247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30313175c19d5f1b%3A0x3bb7acbe8c4f733c!2sJl.%20Jaring%20Udang%206%2C%20Medan%20Labuhan%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1718550000000!5m2!1sid!2sid" 
-        width="100%" 
-        height="350" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </section>
-  </main>
-  <script>
-    function updateDateTime() {
-      const now = new Date();
-      const options = {
-        weekday: 'long', year: 'numeric', month: 'long',
-        day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'
-      };
-      const dateTimeString = now.toLocaleDateString('id-ID', options) + ' ' + now.toLocaleTimeString('id-ID');
-      document.getElementById("datetime").innerHTML = "Waktu sekarang: " + dateTimeString;
-    }
 
-    updateDateTime();
-    setInterval(updateDateTime, 1000);
-  </script>
+  <header>
+    <img src="img/kop-surat.png" alt="Kop Surat GPI Jemaat Bersinar" class="kop-surat" />
+  </header>
+
+  <main>
+    <h1>Selamat Datang di Website Resmi</h1>
+    <p>
+      GPI Jemaat Bersinar Pekan Labuhan merupakan tempat pertumbuhan iman dan kasih dalam terang Injil Kristus.
+      Silakan telusuri halaman ini untuk mengetahui lebih lanjut tentang pelayanan, kegiatan, dan informasi penting lainnya.
+    </p>
+    <p>
+      Tuhan memberkati setiap pengunjung dengan damai sejahtera dan sukacita dari Tuhan Yesus Kristus.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 GPI Jemaat Bersinar. All rights reserved.
+  </footer>
+
 </body>
 </html>
